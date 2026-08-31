@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kewicare Travels and Tours — Plan, book, and explore Uganda</title>
+<meta name="description" content="Kewicare Travels and Tours plans gorilla trekking, safaris, and custom trips across Uganda — itineraries, permits, and local guides handled end to end.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-950:#142A1E;
+    --green-800:#1E3B29;
+    --green-700:#28503A;
+    --green-600:#33684A;
+    --gold-300:#E7CC85;
+    --gold-500:#C9962C;
+    --rust-600:#9A4E2A;
+    --rust-700:#7C3E20;
+    --cream-50:#FBF8F0;
+    --cream-100:#F2ECDC;
+    --cream-200:#E9E1CB;
+    --ink-900:#1B1A16;
+    --ink-700:#3A362E;
+    --ink-500:#6B665A;
+    --line:rgba(27,26,22,.14);
+    --line-onDark:rgba(251,248,240,.18);
+    --radius-sm:8px;
+    --radius-md:14px;
+    --radius-lg:22px;
+    --font-sans:'Geist',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+    --font-mono:'Geist Mono',ui-monospace,'SFMono-Regular',Consolas,monospace;
+    --wrap:1160px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+  }
+  body{
+    margin:0;
+    font-family:var(--font-sans);
+    color:var(--ink-900);
+    background:var(--cream-50);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  h1,h2,h3,p{margin:0;}
+  .wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:24px;}
+  :focus-visible{outline:2px solid var(--gold-500);outline-offset:3px;border-radius:4px;}
+
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:12px;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 24px;
+    border-radius:999px;
+    font-family:var(--font-sans);
+    font-weight:600;
+    font-size:15px;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:transform .15s ease, background .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-rust{background:var(--rust-600);color:var(--cream-50);}
+  .btn-rust:hover{background:var(--rust-700);}
+  .btn-outline-dark{background:transparent;color:var(--cream-50);border-color:var(--line-onDark);}
+  .btn-outline-dark:hover{background:rgba(251,248,240,.08);}
+  .btn-outline-light{background:transparent;color:var(--ink-900);border-color:var(--line);}
+  .btn-outline-light:hover{background:var(--cream-100);}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(20,42,30,.9);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-onDark);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;color:var(--cream-50);}
+  .logo{font-weight:700;font-size:19px;letter-spacing:-.01em;}
+  .logo span{color:var(--gold-300);}
+  .nav-links{display:flex;align-items:center;gap:34px;}
+  .nav-links a{font-size:14.5px;font-weight:500;color:var(--cream-100);opacity:.85;}
+  .nav-links a:hover{opacity:1;}
+  .nav-actions{display:flex;align-items:center;gap:14px;}
+  .nav-toggle{display:none;}
+  .nav-toggle-label{display:none;}
+
+  @media (max-width:860px){
+    .nav-links{
+      position:absolute;top:76px;left:0;right:0;
+      background:var(--green-950);
+      flex-direction:column;align-items:flex-start;
+      padding:18px 24px 26px;gap:16px;
+      border-bottom:1px solid var(--line-onDark);
+      display:none;
+    }
+    .nav-toggle:checked ~ .nav-links{display:flex;}
+    .nav-toggle-label{
+      display:flex;align-items:center;justify-content:center;
+      width:38px;height:38px;cursor:pointer;color:var(--cream-50);
+    }
+    .nav-actions .btn-outline-dark{display:none;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:var(--green-950);
+    color:var(--cream-50);
+    overflow:hidden;
+  }
+  .hero-art{position:absolute;inset:0;width:100%;height:100%;}
+  .hero-art svg{width:100%;height:100%;}
+  .hero-scrim{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(20,42,30,.15) 0%, rgba(20,42,30,.55) 62%, var(--cream-50) 100%);
+  }
+  .hero-inner{
+    position:relative;z-index:2;
+    padding:76px 24px 0;
+    text-align:center;
+    display:flex;flex-direction:column;align-items:center;
+  }
+  .proof-strip{
+    display:inline-flex;align-items:center;gap:10px;
+    background:rgba(251,248,240,.1);
+    border:1px solid var(--line-onDark);
+    padding:7px 16px 7px 8px;
+    border-radius:999px;
+    font-size:13.5px;
+    margin-bottom:28px;
+  }
+  .avatar-stack{display:flex;}
+  .avatar-stack span{
+    width:24px;height:24px;border-radius:50%;
+    border:2px solid var(--green-950);
+    margin-left:-8px;
+    background:var(--gold-300);
+  }
+  .avatar-stack span:first-child{margin-left:0;}
+  .avatar-stack span:nth-child(2){background:var(--rust-600);}
+  .avatar-stack span:nth-child(3){background:var(--green-600);}
+  .stars{color:var(--gold-300);letter-spacing:1px;}
+
+  .hero h1{
+    font-size:clamp(34px, 5.4vw, 62px);
+    font-weight:700;
+    letter-spacing:-.02em;
+    line-height:1.06;
+    max-width:15ch;
+  }
+  .hero .sub{
+    margin-top:20px;
+    font-size:clamp(16px, 1.7vw, 19px);
+    color:var(--cream-100);
+    max-width:38ch;
+  }
+  .hero-ctas{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;justify-content:center;}
+
+  .dest-strip{
+    position:relative;z-index:2;
+    margin-top:64px;
+    padding-bottom:36px;
+  }
+  .dest-strip p{
+    text-align:center;
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--cream-100);
+    opacity:.75;
+    margin-bottom:18px;
+  }
+  .dest-chips{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 12px;padding-inline:20px;}
+  .dest-chips span{
+    font-size:13.5px;font-weight:500;color:var(--cream-50);
+    border:1px solid var(--line-onDark);
+    padding:7px 14px;border-radius:999px;
+  }
+
+  /* ---------- Credibility line ---------- */
+  .credibility{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    padding:34px 24px 0;
+    font-size:15px;color:var(--ink-700);
+    text-align:center;
+  }
+  .credibility .badge{
+    width:26px;height:26px;border-radius:50%;
+    background:var(--rust-600);
+    display:inline-flex;align-items:center;justify-content:center;
+    color:var(--cream-50);font-size:12px;font-weight:700;
+    flex:none;
+  }
+
+  /* ---------- Section shell ---------- */
+  section{padding:88px 0;}
+  .section-head{max-width:640px;margin:0 auto 52px;text-align:center;}
+  .section-head .eyebrow{color:var(--rust-600);margin-bottom:12px;display:block;}
+  .section-head h2{
+    font-size:clamp(26px, 3.4vw, 38px);
+    font-weight:700;letter-spacing:-.015em;line-height:1.15;
+  }
+  .section-head p{margin-top:14px;font-size:16.5px;color:var(--ink-500);}
+
+  /* ---------- Feature grid ---------- */
+  .feature-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  .feature-card{
+    background:var(--cream-50);
+    border:1px solid var(--line);
+    border-radius:var(--radius-lg);
+    padding:26px 24px 28px;
+  }
+  .feature-mock{
+    height:108px;
+    border-radius:var(--radius-md);
+    background:var(--cream-100);
+    border:1px solid var(--line);
+    margin-bottom:20px;
+    padding:14px;
+    display:flex;flex-direction:column;justify-content:space-between;
+  }
+  .feature-mock .row{display:flex;justify-content:space-between;align-items:center;}
+  .feature-mock .pill{
+    font-family:var(--font-mono);font-size:10.5px;font-weight:600;
+    background:var(--green-800);color:var(--cream-50);
+    padding:3px 8px;border-radius:999px;
+  }
+  .feature-mock .bar{height:6px;border-radius:4px;background:var(--cream-200);overflow:hidden;}
+  .feature-mock .bar i{display:block;height:100%;background:var(--gold-500);}
+  .feature-mock .dot{width:8px;height:8px;border-radius:50%;background:var(--rust-600);}
+  .feature-card h3{font-size:17.5px;font-weight:700;margin-bottom:8px;}
+  .feature-card p{font-size:14.5px;color:var(--ink-500);}
+
+  @media (max-width:900px){.feature-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:620px){.feature-grid{grid-template-columns:1fr;}}
+
+  /* ---------- Comparison ---------- */
+  .compare{background:var(--green-950);color:var(--cream-50);}
+  .compare .section-head .eyebrow{color:var(--gold-300);}
+  .compare .section-head p{color:var(--cream-100);}
+  .compare-table{
+    width:100%;border-collapse:collapse;
+    font-size:14.5px;
+    background:rgba(251,248,240,.03);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+  }
+  .compare-table th,.compare-table td{
+    padding:16px 18px;text-align:center;border-bottom:1px solid var(--line-onDark);
+  }
+  .compare-table th{font-weight:600;font-size:14px;}
+  .compare-table td:first-child,.compare-table th:first-child{text-align:left;color:var(--cream-100);font-weight:500;}
+  .compare-table thead th:nth-child(2){
+    background:var(--rust-600);color:var(--cream-50);
+    border-radius:var(--radius-md) var(--radius-md) 0 0;
+  }
+  .compare-table tbody tr:last-child td{border-bottom:none;}
+  .compare-table td:nth-child(2){background:rgba(154,78,42,.14);font-weight:600;}
+  .yes,.no{font-family:var(--font-mono);font-weight:600;}
+  .yes{color:var(--gold-300);}
+  .no{color:rgba(251,248,240,.35);}
+  .compare-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+
+  /* ---------- Testimonials ---------- */
+  .stat-line{text-align:center;max-width:560px;margin:0 auto 46px;font-size:19px;font-weight:600;}
+  .stat-line em{color:var(--rust-600);font-style:normal;}
+  .wall{
+    columns:3 260px;column-gap:18px;
+  }
+  .t-card{
+    break-inside:avoid;margin-bottom:18px;
+    background:var(--cream-50);
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    padding:20px 20px 22px;
+  }
+  .t-card .stars{color:var(--gold-500);font-size:13px;margin-bottom:10px;display:block;}
+  .t-card p{font-size:14.5px;color:var(--ink-700);}
+  .t-meta{
+    margin-top:14px;display:flex;justify-content:space-between;align-items:baseline;
+    font-family:var(--font-mono);font-size:11px;color:var(--ink-500);
+  }
+  .t-meta .name{font-family:var(--font-sans);font-weight:600;color:var(--ink-900);font-size:13.5px;}
+  .t-meta .tag{color:var(--rust-600);}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:760px;margin:0 auto;}
+  .faq details{
+    border-bottom:1px solid var(--line);
+    padding:20px 2px;
+  }
+  .faq summary{
+    cursor:pointer;list-style:none;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    font-weight:600;font-size:16px;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{
+    content:"+";
+    font-size:22px;font-weight:400;color:var(--rust-600);
+    flex:none;transition:transform .2s ease;
+  }
+  .faq details[open] summary::after{transform:rotate(45deg);}
+  .faq .a{margin-top:14px;font-size:14.5px;color:var(--ink-500);max-width:60ch;}
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    background:var(--rust-700);
+    color:var(--cream-50);
+    border-radius:var(--radius-lg);
+    margin:0 24px;
+    padding:64px 32px;
+    text-align:center;
+  }
+  .final-cta-wrap{max-width:var(--wrap);margin-inline:auto;}
+  .final-cta h2{font-size:clamp(26px,3.6vw,36px);font-weight:700;letter-spacing:-.015em;margin-bottom:14px;}
+  .final-cta p{color:rgba(251,248,240,.85);font-size:16px;margin-bottom:30px;}
+  .promo{
+    margin-top:22px;font-family:var(--font-mono);font-size:12.5px;
+    color:rgba(251,248,240,.75);
+  }
+  .promo b{color:var(--gold-300);}
+
+  /* ---------- Footer ---------- */
+  footer{padding:60px 0 40px;}
+  .footer-grid{
+    display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;
+    padding-bottom:36px;border-bottom:1px solid var(--line);
+  }
+  .footer-brand p{margin-top:10px;color:var(--ink-500);font-size:14px;max-width:28ch;}
+  .footer-cols{display:flex;gap:64px;}
+  .footer-col h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-500);margin-bottom:14px;}
+  .footer-col a{display:block;font-size:14.5px;color:var(--ink-700);margin-bottom:10px;}
+  .footer-col a:hover{color:var(--rust-600);}
+  .footer-bottom{
+    display:flex;justify-content:space-between;align-items:center;
+    padding-top:24px;font-size:13px;color:var(--ink-500);flex-wrap:wrap;gap:10px;
+  }
+
+  @media (max-width:640px){
+    section{padding:64px 0;}
+    .wall{columns:1;}
+    .compare-table{font-size:13px;}
+    .footer-grid{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">Kewi<span>care</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <ul class="nav-links">
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#compare">Why Kewicare</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="btn btn-outline-dark" href="#packages">See packages</a>
+      <a class="btn btn-rust" href="#cta">Start planning</a>
+      <label class="nav-toggle-label" for="nav-toggle" aria-label="Toggle menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </label>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="padding-top:0;">
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0F2318"/>
+            <stop offset="55%" stop-color="#1E3B29"/>
+            <stop offset="100%" stop-color="#2F5C3F"/>
+          </linearGradient>
+          <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#E7CC85" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#E7CC85" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="1600" height="900" fill="url(#sky)"/>
+        <circle cx="1180" cy="300" r="220" fill="url(#sun)"/>
+        <circle cx="1180" cy="300" r="70" fill="#F2E2B8" opacity="0.85"/>
+
+        <!-- birds -->
+        <g stroke="#F2E2B8" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.75">
+          <path d="M240 190 q14 -20 28 0 q14 -20 28 0"/>
+          <path d="M310 230 q11 -16 22 0 q11 -16 22 0"/>
+          <path d="M180 250 q9 -13 18 0 q9 -13 18 0"/>
+          <path d="M950 150 q12 -17 24 0 q12 -17 24 0"/>
+        </g>
+
+        <!-- ridge 1 (farthest) -->
+        <polygon points="0,620 0,520 120,470 260,540 400,460 560,530 720,440 880,520 1040,450 1200,510 1360,440 1520,500 1600,460 1600,900 0,900"
+                 fill="#28503A" opacity="0.55"/>
+        <!-- ridge 2 -->
+        <polygon points="0,700 0,600 150,560 320,630 480,560 650,640 820,560 980,630 1150,570 1320,640 1480,580 1600,620 1600,900 0,900"
+                 fill="#1E3B29" opacity="0.8"/>
+        <!-- ridge 3 (nearest) -->
+        <polygon points="0,900 0,760 130,720 300,780 470,710 660,790 850,710 1040,780 1230,720 1420,780 1600,740 1600,900"
+                 fill="#142A1E"/>
+
+        <!-- trail -->
+        <path d="M800 900 C 760 800, 840 760, 800 700 C 760 640, 830 610, 800 560"
+              stroke="#E7CC85" stroke-width="4" stroke-dasharray="2 14" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+        <!-- traveler silhouette -->
+        <g transform="translate(788,832)" fill="#142A1E">
+          <circle cx="12" cy="0" r="7"/>
+          <rect x="6" y="8" width="4" height="9" rx="2" transform="rotate(-8 6 8)"/>
+          <rect x="14" y="8" width="12" height="16" rx="4"/>
+          <rect x="10" y="12" width="8" height="12" rx="3"/>
+          <rect x="16" y="30" width="4" height="13" rx="2" transform="rotate(6 16 30)"/>
+          <rect x="22" y="30" width="4" height="13" rx="2" transform="rotate(-4 22 30)"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <span class="proof-strip">
+        <span class="avatar-stack" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span><strong class="stars">★★★★★</strong> 4.8/5 from 1,200+ travelers</span>
+      </span>
+      <h1>The Pearl of Africa, planned right.</h1>
+      <p class="sub">Plan, book, and explore Uganda — gorilla treks, safaris, and custom trips, all in one place.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-rust" href="#cta">Start planning</a>
+        <a class="btn btn-outline-dark" href="#packages">Browse packages</a>
+      </div>
+    </div>
+
+    <div class="dest-strip">
+      <p>Where we take you</p>
+      <div class="dest-chips" id="destinations">
+        <span>Bwindi Impenetrable Forest</span>
+        <span>Murchison Falls</span>
+        <span>Queen Elizabeth NP</span>
+        <span>Kidepo Valley</span>
+        <span>Ssese Islands</span>
+        <span>Jinja &amp; the Nile</span>
+      </div>
+    </div>
+  </section>
+
+  <p class="credibility">
+    <span class="badge">✓</span>
+    Licensed tour operator, based in Kampala — trips guided by rangers who know the parks
+  </p>
+
+  <!-- FEATURES -->
+  <section id="packages">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>Your whole trip, in one place</h2>
+        <p>From your itinerary to your gorilla permit, Kewicare handles every part of your Uganda trip so nothing falls through the cracks.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-mock">
+            <div class="row"><span class="pill">DAY 3 / 7</span><span class="dot"></span></div>
+            <div class="bar"><i style="width:60%"></i></div>
+          </div>
+          <h3>Itinerary Builder</h3>
+          <p>A day-by-day plan across parks, lodges, and activities — adjust it any time before you fly.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-mock">
+            <div class="row"><span class="pill">VERIFIED</span><span class="dot"></span></div>
+            <div class="bar"><i style="width:90%"></i></div>
+          </div>
+          <h3>Verified Stays &amp; Pricing</h3>
+          <p>Every lodge and camp is inspected and priced up front — no surprise mark-ups after booking.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-mock">
+            <div class="row"><span class="pill">MATCHED</span><span class="dot"></span></div>
+            <div class="bar"><i style="width:75%"></i></div>
+          </div>
+          <h3>Local Guide Matching</h3>
+          <p>Get paired with a licensed guide who knows the roads, the parks, and the wildlife.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-mock">
+            <div class="row"><span class="pill">CONFIRMED</span><span class="dot"></span></div>
+            <div class="bar"><i style="width:100%"></i></div>
+          </div>
+          <h3>Permits &amp; Logistics</h3>
+          <p>Gorilla permits, park fees, visas, and transfers — confirmed before you land in Entebbe.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-mock">
+            <div class="row"><span class="pill">4.8 ★</span><span class="dot"></span></div>
+            <div class="bar"><i style="width:80%"></i></div>
+          </div>
+          <h3>Traveler Reviews</h3>
+          <p>Real reviews from real Kewicare travelers, broken down park by park and lodge by lodge.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-mock">
+            <div class="row"><span class="pill">CUSTOM</span><span class="dot"></span></div>
+            <div class="bar"><i style="width:45%"></i></div>
+          </div>
+          <h3>Custom Requests</h3>
+          <p>Tell us what you want to see and who's coming — we'll build a package around it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section class="compare" id="compare">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How we compare</span>
+        <h2>Kewicare vs. going it alone</h2>
+        <p>Booking sites are fine for a hotel room. A Uganda trip has permits, road conditions, and parks that don't run on someone else's schedule.</p>
+      </div>
+
+      <div class="compare-scroll">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th>Kewicare</th>
+              <th>Booking it yourself</th>
+              <th>Generic travel agency</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Licensed, local guides</td><td class="yes">Yes</td><td class="no">No</td><td class="yes">Yes</td></tr>
+            <tr><td>24/7 support while in-country</td><td class="yes">Yes</td><td class="no">No</td><td class="no">No</td></tr>
+            <tr><td>Verified accommodation pricing</td><td class="yes">Yes</td><td class="no">No</td><td class="no">No</td></tr>
+            <tr><td>Gorilla permits handled for you</td><td class="yes">Yes</td><td class="no">No</td><td class="yes">Yes</td></tr>
+            <tr><td>Fully custom itineraries</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="no">No</td></tr>
+            <tr><td>Transparent, upfront pricing</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="no">No</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="reviews">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:30px;">
+        <span class="eyebrow">Traveler stories</span>
+        <h2>Trips people still talk about</h2>
+      </div>
+      <p class="stat-line">Kewicare travelers explored <em>40+ destinations</em> across Uganda this year.</p>
+
+      <div class="wall">
+        <div class="t-card">
+          <span class="stars">★★★★★</span>
+          <p>Our guide got us to the trailhead early and we had our gorilla family almost to ourselves for twenty minutes. Worth every shilling.</p>
+          <div class="t-meta"><span class="name">Amara O.</span><span class="tag">Gorilla trek, Bwindi</span></div>
+        </div>
+        <div class="t-card">
+          <span class="stars">★★★★★</span>
+          <p>Everything was arranged before we landed — permits, driver, lodge. We just had to show up and enjoy it.</p>
+          <div class="t-meta"><span class="name">Daniel K.</span><span class="tag">Murchison Falls safari</span></div>
+        </div>
+        <div class="t-card">
+          <span class="stars">★★★★★</span>
+          <p>Booked a last-minute Nile rafting add-on through the app and it was confirmed within the hour.</p>
+          <div class="t-meta"><span class="name">Priya S.</span><span class="tag">Jinja, Nile rafting</span></div>
+        </div>
+        <div class="t-card">
+          <span class="stars">★★★★★</span>
+          <p>Three generations of our family, one itinerary, zero stress. That's not something I expected from a trip this big.</p>
+          <div class="t-meta"><span class="name">The Odongo family</span><span class="tag">Custom group trip</span></div>
+        </div>
+        <div class="t-card">
+          <span class="stars">★★★★★</span>
+          <p>Kidepo is remote and Kewicare's driver knew every stretch of road. Would not have attempted it on my own.</p>
+          <div class="t-meta"><span class="name">Marcus T.</span><span class="tag">Kidepo Valley safari</span></div>
+        </div>
+        <div class="t-card">
+          <span class="stars">★★★★★</span>
+          <p>We changed our plans twice mid-trip and Kewicare just quietly rebooked everything. That's the whole pitch.</p>
+          <div class="t-meta"><span class="name">Hannah R.</span><span class="tag">Ssese Islands getaway</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Questions, answered</span>
+        <h2>The things you're probably wondering</h2>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>Is it cheaper to book everything myself?</summary>
+          <p class="a">Sometimes the sticker price looks lower, but permits, park fees, and road transport in Uganda are easy to underestimate or double-book. Our pricing is upfront, and there are no mark-ups added after you've booked.</p>
+        </details>
+        <details>
+          <summary>Do you handle visas and gorilla permits?</summary>
+          <p class="a">Yes — visa guidance, gorilla and chimp permits, and park entry fees are arranged and confirmed before you travel.</p>
+        </details>
+        <details>
+          <summary>What happens if my flight is delayed?</summary>
+          <p class="a">Your Kewicare contact is reachable 24/7 while you're in-country. Transfers and the first day of your itinerary are adjusted at no extra cost.</p>
+        </details>
+        <details>
+          <summary>Can you build a custom trip for my group?</summary>
+          <p class="a">Yes. Tell us your dates, budget, and what you want to see, and we'll put together an itinerary built around your group's pace.</p>
+        </details>
+        <details>
+          <summary>Do I need to pay in full upfront?</summary>
+          <p class="a">No — a deposit secures your dates and permits, with the balance due closer to travel. Exact terms are shown at checkout.</p>
+        </details>
+        <details>
+          <summary>What's your cancellation policy?</summary>
+          <p class="a">Cancellation terms depend on how close to departure you cancel, since permits and lodges have their own deadlines. Full terms are sent with your itinerary.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="cta" style="padding-top:0;">
+    <div class="wrap">
+      <div class="final-cta">
+        <div class="final-cta-wrap">
+          <h2>Build a trip you're excited to take.</h2>
+          <p>Start with what you have in mind — Kewicare will help you shape it into an itinerary.</p>
+          <a class="btn" style="background:var(--cream-50);color:var(--rust-700);" href="#top">Start your trip</a>
+          <p class="promo"><b>SAFARI15</b> applied automatically — 15% off your first booking</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top" style="color:var(--ink-900);">Kewi<span style="color:var(--rust-600);">care</span></a>
+        <p>Plan, book, and explore. All in one place.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="#destinations">Destinations</a>
+          <a href="#packages">Packages</a>
+          <a href="#compare">Why Kewicare</a>
+          <a href="#reviews">Reviews</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cancellation Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Kewicare Travels and Tours. All rights reserved.</span>
+      <span>Kampala, Uganda</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

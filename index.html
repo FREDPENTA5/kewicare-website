@@ -3,8 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kewicare Travels and Tours — Plan, book, and explore Uganda</title>
-<meta name="description" content="Kewicare Travels and Tours plans gorilla trekking, safaris, and custom trips across Uganda — itineraries, permits, and local guides handled end to end.">
+<title>Kewicare Travels and Tours | Gorilla Trekking, Safaris &amp; Custom Uganda Trips</title>
+<meta name="description" content="Plan gorilla trekking, wildlife safaris, and custom Uganda trips with Kewicare Travels and Tours. Itineraries, permits, and local guides handled end to end.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#142A1E">
+<link rel="canonical" href="https://kewicare-travels.vercel.app/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kewicare Travels and Tours">
+<meta property="og:title" content="Kewicare Travels and Tours | Gorilla Trekking, Safaris &amp; Custom Uganda Trips">
+<meta property="og:description" content="Plan gorilla trekking, wildlife safaris, and custom Uganda trips with Kewicare. Itineraries, permits, and local guides handled end to end.">
+<meta property="og:url" content="https://kewicare-travels.vercel.app/">
+<meta property="og:image" content="https://kewicare-travels.vercel.app/big-5-safari-uganda.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kewicare Travels and Tours | Uganda Safaris &amp; Gorilla Trekking">
+<meta name="twitter:description" content="Plan gorilla trekking, wildlife safaris, and custom Uganda trips. Permits, guides, and itineraries handled end to end.">
+<meta name="twitter:image" content="https://kewicare-travels.vercel.app/big-5-safari-uganda.png">
+
+<!-- Structured Data: Travel Agency -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Kewicare Travels and Tours",
+  "description": "Plan gorilla trekking, wildlife safaris, and custom trips across Uganda with local guides, permits, and itineraries handled end to end.",
+  "url": "https://kewicare-travels.vercel.app/",
+  "image": "https://kewicare-travels.vercel.app/big-5-safari-uganda.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kampala",
+    "addressCountry": "UG"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Uganda"
+  },
+  "priceRange": "$$",
+  "sameAs": []
+}
+</script>
+
+<!-- Structured Data: FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is it cheaper to book everything myself?", "acceptedAnswer": {"@type": "Answer", "text": "Sometimes the sticker price looks lower, but permits, park fees, and road transport in Uganda are easy to underestimate or double-book. Our pricing is upfront, and there are no mark-ups added after you've booked."}},
+    {"@type": "Question", "name": "Do you handle visas and gorilla permits?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Visa guidance, gorilla and chimp permits, and park entry fees are arranged and confirmed before you travel."}},
+    {"@type": "Question", "name": "What happens if my flight is delayed?", "acceptedAnswer": {"@type": "Answer", "text": "Your Kewicare contact is reachable 24/7 while you're in-country. Transfers and the first day of your itinerary are adjusted at no extra cost."}},
+    {"@type": "Question", "name": "Can you build a custom trip for my group?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Tell us your dates, budget, and what you want to see, and we'll put together an itinerary built around your group's pace."}},
+    {"@type": "Question", "name": "Do I need to pay in full upfront?", "acceptedAnswer": {"@type": "Answer", "text": "No. A deposit secures your dates and permits, with the balance due closer to travel. Exact terms are shown at checkout."}},
+    {"@type": "Question", "name": "What's your cancellation policy?", "acceptedAnswer": {"@type": "Answer", "text": "Cancellation terms depend on how close to departure you cancel, since permits and lodges have their own deadlines. Full terms are sent with your itinerary."}}
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -46,12 +104,18 @@
     color:var(--ink-900);
     background:var(--cream-50);
     -webkit-font-smoothing:antialiased;
-    line-height:1.5;
+    -moz-osx-font-smoothing:grayscale;
+    text-rendering:optimizeLegibility;
+    line-height:1.6;
+    font-size:15px;
   }
   img,svg{display:block;max-width:100%;}
   a{color:inherit;text-decoration:none;}
   ul{margin:0;padding:0;list-style:none;}
-  h1,h2,h3,p{margin:0;}
+  h1,h2,h3,h4,p{margin:0;}
+  h1{line-height:1.08;letter-spacing:-.025em;}
+  h2{line-height:1.15;letter-spacing:-.02em;}
+  h3{line-height:1.3;letter-spacing:-.01em;}
   .wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:24px;}
   :focus-visible{outline:2px solid var(--gold-500);outline-offset:3px;border-radius:4px;}
 
@@ -210,45 +274,51 @@
   }
 
   /* ---------- Section shell ---------- */
-  section{padding:88px 0;}
-  .section-head{max-width:640px;margin:0 auto 52px;text-align:center;}
-  .section-head .eyebrow{color:var(--rust-600);margin-bottom:12px;display:block;}
+  section{padding:96px 0;}
+  .section-head{max-width:640px;margin:0 auto 56px;text-align:center;}
+  .section-head .eyebrow{color:var(--rust-600);margin-bottom:14px;display:block;}
   .section-head h2{
     font-size:clamp(26px, 3.4vw, 38px);
-    font-weight:700;letter-spacing:-.015em;line-height:1.15;
+    font-weight:700;line-height:1.15;
   }
-  .section-head p{margin-top:14px;font-size:16.5px;color:var(--ink-500);}
+  .section-head p{margin-top:16px;font-size:16.5px;color:var(--ink-500);line-height:1.65;}
 
   /* ---------- Feature grid ---------- */
   .feature-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
   }
   .feature-card{
     background:var(--cream-50);
-    border:1px solid var(--line);
+    border:none;
     border-radius:var(--radius-lg);
-    padding:26px 24px 28px;
+    padding:32px 28px 32px;
+    box-shadow:0 1px 3px rgba(27,26,22,.06), 0 4px 16px rgba(27,26,22,.04);
+    transition:box-shadow .2s ease, transform .2s ease;
+  }
+  .feature-card:hover{
+    box-shadow:0 2px 8px rgba(27,26,22,.08), 0 8px 28px rgba(27,26,22,.07);
+    transform:translateY(-2px);
   }
   .feature-mock{
-    height:108px;
+    height:100px;
     border-radius:var(--radius-md);
-    background:var(--cream-100);
-    border:1px solid var(--line);
-    margin-bottom:20px;
-    padding:14px;
+    background:linear-gradient(135deg, var(--cream-100) 0%, rgba(233,225,203,.4) 100%);
+    border:none;
+    margin-bottom:24px;
+    padding:16px;
     display:flex;flex-direction:column;justify-content:space-between;
   }
   .feature-mock .row{display:flex;justify-content:space-between;align-items:center;}
   .feature-mock .pill{
     font-family:var(--font-mono);font-size:10.5px;font-weight:600;
     background:var(--green-800);color:var(--cream-50);
-    padding:3px 8px;border-radius:999px;
+    padding:4px 10px;border-radius:999px;
   }
-  .feature-mock .bar{height:6px;border-radius:4px;background:var(--cream-200);overflow:hidden;}
-  .feature-mock .bar i{display:block;height:100%;background:var(--gold-500);}
+  .feature-mock .bar{height:5px;border-radius:4px;background:rgba(27,26,22,.06);overflow:hidden;}
+  .feature-mock .bar i{display:block;height:100%;background:var(--gold-500);border-radius:4px;}
   .feature-mock .dot{width:8px;height:8px;border-radius:50%;background:var(--rust-600);}
-  .feature-card h3{font-size:17.5px;font-weight:700;margin-bottom:8px;}
-  .feature-card p{font-size:14.5px;color:var(--ink-500);}
+  .feature-card h3{font-size:17px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em;}
+  .feature-card p{font-size:14.5px;color:var(--ink-500);line-height:1.55;}
 
   @media (max-width:900px){.feature-grid{grid-template-columns:repeat(2,1fr);}}
   @media (max-width:620px){.feature-grid{grid-template-columns:1fr;}}
@@ -284,19 +354,20 @@
   .stat-line{text-align:center;max-width:560px;margin:0 auto 46px;font-size:19px;font-weight:600;}
   .stat-line em{color:var(--rust-600);font-style:normal;}
   .wall{
-    columns:3 260px;column-gap:18px;
+    columns:3 260px;column-gap:20px;
   }
   .t-card{
-    break-inside:avoid;margin-bottom:18px;
+    break-inside:avoid;margin-bottom:20px;
     background:var(--cream-50);
-    border:1px solid var(--line);
+    border:none;
     border-radius:var(--radius-md);
-    padding:20px 20px 22px;
+    padding:24px 24px 26px;
+    box-shadow:0 1px 3px rgba(27,26,22,.06), 0 4px 16px rgba(27,26,22,.04);
   }
-  .t-card .stars{color:var(--gold-500);font-size:13px;margin-bottom:10px;display:block;}
-  .t-card p{font-size:14.5px;color:var(--ink-700);}
+  .t-card .stars{color:var(--gold-500);font-size:13px;margin-bottom:12px;display:block;letter-spacing:1px;}
+  .t-card p{font-size:14.5px;color:var(--ink-700);line-height:1.6;}
   .t-meta{
-    margin-top:14px;display:flex;justify-content:space-between;align-items:baseline;
+    margin-top:16px;display:flex;justify-content:space-between;align-items:baseline;
     font-family:var(--font-mono);font-size:11px;color:var(--ink-500);
   }
   .t-meta .name{font-family:var(--font-sans);font-weight:600;color:var(--ink-900);font-size:13.5px;}
@@ -306,12 +377,12 @@
   .faq{max-width:760px;margin:0 auto;}
   .faq details{
     border-bottom:1px solid var(--line);
-    padding:20px 2px;
+    padding:22px 2px;
   }
   .faq summary{
     cursor:pointer;list-style:none;
     display:flex;align-items:center;justify-content:space-between;gap:16px;
-    font-weight:600;font-size:16px;
+    font-weight:600;font-size:16px;line-height:1.4;
   }
   .faq summary::-webkit-details-marker{display:none;}
   .faq summary::after{
@@ -320,7 +391,7 @@
     flex:none;transition:transform .2s ease;
   }
   .faq details[open] summary::after{transform:rotate(45deg);}
-  .faq .a{margin-top:14px;font-size:14.5px;color:var(--ink-500);max-width:60ch;}
+  .faq .a{margin-top:14px;font-size:15px;color:var(--ink-500);max-width:60ch;line-height:1.7;}
 
   /* ---------- Final CTA ---------- */
   .final-cta{
@@ -449,7 +520,7 @@
         <span><strong class="stars">★★★★★</strong> 4.8/5 from 1,200+ travelers</span>
       </span>
       <h1>The Pearl of Africa, planned right.</h1>
-      <p class="sub">Plan, book, and explore Uganda — gorilla treks, safaris, and custom trips, all in one place.</p>
+      <p class="sub">Plan, book, and explore Uganda. Gorilla treks, safaris, and custom trips, all in one place.</p>
       <div class="hero-ctas">
         <a class="btn btn-rust" href="#cta">Start planning</a>
         <a class="btn btn-outline-dark" href="#packages">Browse packages</a>
@@ -471,7 +542,7 @@
 
   <p class="credibility">
     <span class="badge">✓</span>
-    Licensed tour operator, based in Kampala — trips guided by rangers who know the parks
+      Licensed tour operator, based in Kampala. Trips guided by rangers who know the parks
   </p>
 
   <!-- FEATURES -->
@@ -490,7 +561,7 @@
             <div class="bar"><i style="width:60%"></i></div>
           </div>
           <h3>Itinerary Builder</h3>
-          <p>A day-by-day plan across parks, lodges, and activities — adjust it any time before you fly.</p>
+          <p>A day-by-day plan across parks, lodges, and activities. Adjust it any time before you fly.</p>
         </div>
 
         <div class="feature-card">
@@ -499,7 +570,7 @@
             <div class="bar"><i style="width:90%"></i></div>
           </div>
           <h3>Verified Stays &amp; Pricing</h3>
-          <p>Every lodge and camp is inspected and priced up front — no surprise mark-ups after booking.</p>
+          <p>Every lodge and camp is inspected and priced up front, with no surprise mark-ups after booking.</p>
         </div>
 
         <div class="feature-card">
@@ -517,7 +588,7 @@
             <div class="bar"><i style="width:100%"></i></div>
           </div>
           <h3>Permits &amp; Logistics</h3>
-          <p>Gorilla permits, park fees, visas, and transfers — confirmed before you land in Entebbe.</p>
+          <p>Gorilla permits, park fees, visas, and transfers, all confirmed before you land in Entebbe.</p>
         </div>
 
         <div class="feature-card">
@@ -535,7 +606,7 @@
             <div class="bar"><i style="width:45%"></i></div>
           </div>
           <h3>Custom Requests</h3>
-          <p>Tell us what you want to see and who's coming — we'll build a package around it.</p>
+          <p>Tell us what you want to see and who's coming. We'll build a package around it.</p>
         </div>
       </div>
     </div>
@@ -590,7 +661,7 @@
         </div>
         <div class="t-card">
           <span class="stars">★★★★★</span>
-          <p>Everything was arranged before we landed — permits, driver, lodge. We just had to show up and enjoy it.</p>
+          <p>Everything was arranged before we landed: permits, driver, lodge. We just had to show up and enjoy it.</p>
           <div class="t-meta"><span class="name">Daniel K.</span><span class="tag">Murchison Falls safari</span></div>
         </div>
         <div class="t-card">
@@ -632,7 +703,7 @@
         </details>
         <details>
           <summary>Do you handle visas and gorilla permits?</summary>
-          <p class="a">Yes — visa guidance, gorilla and chimp permits, and park entry fees are arranged and confirmed before you travel.</p>
+          <p class="a">Yes. Visa guidance, gorilla and chimp permits, and park entry fees are arranged and confirmed before you travel.</p>
         </details>
         <details>
           <summary>What happens if my flight is delayed?</summary>
@@ -644,7 +715,7 @@
         </details>
         <details>
           <summary>Do I need to pay in full upfront?</summary>
-          <p class="a">No — a deposit secures your dates and permits, with the balance due closer to travel. Exact terms are shown at checkout.</p>
+          <p class="a">No. A deposit secures your dates and permits, with the balance due closer to travel. Exact terms are shown at checkout.</p>
         </details>
         <details>
           <summary>What's your cancellation policy?</summary>
@@ -660,9 +731,9 @@
       <div class="final-cta">
         <div class="final-cta-wrap">
           <h2>Build a trip you're excited to take.</h2>
-          <p>Start with what you have in mind — Kewicare will help you shape it into an itinerary.</p>
+          <p>Start with what you have in mind. Kewicare will help you shape it into an itinerary.</p>
           <a class="btn" style="background:var(--cream-50);color:var(--rust-700);" href="#top">Start your trip</a>
-          <p class="promo"><b>SAFARI15</b> applied automatically — 15% off your first booking</p>
+          <p class="promo"><b>SAFARI15</b> applied automatically for 15% off your first booking</p>
         </div>
       </div>
     </div>

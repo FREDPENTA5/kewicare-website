@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -155,8 +155,14 @@
     border-bottom:1px solid var(--line-onDark);
   }
   .nav{display:flex;align-items:center;justify-content:space-between;height:76px;color:var(--cream-50);}
-  .logo{font-weight:700;font-size:19px;letter-spacing:-.01em;}
+  .logo{font-weight:700;font-size:19px;letter-spacing:-.01em;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;}
   .logo span{color:var(--gold-300);}
+  .logo-tag{
+    display:block;width:100%;
+    font-size:10.5px;font-weight:500;letter-spacing:.04em;
+    color:rgba(255,255,255,.5);
+    margin-top:-2px;
+  }
   .nav-links{display:flex;align-items:center;gap:34px;}
   .nav-links a{font-size:14.5px;font-weight:500;color:var(--cream-100);opacity:.85;}
   .nav-links a:hover{opacity:1;}
@@ -196,7 +202,7 @@
   }
   .hero-inner{
     position:relative;z-index:2;
-    padding:76px 24px 0;
+    padding:48px 24px 0;
     text-align:center;
     display:flex;flex-direction:column;align-items:center;
   }
@@ -261,17 +267,17 @@
   }
 
   /* ---------- Credibility line ---------- */
-  .credibility{
-    display:flex;align-items:center;justify-content:center;gap:10px;
-    padding:34px 24px 0;
-    font-size:15px;color:var(--ink-700);
+  .hero-credential{
+    display:inline-flex;align-items:center;gap:10px;
+    margin-top:28px;
+    font-size:14px;color:rgba(255,255,255,.7);
     text-align:center;
   }
-  .credibility .badge{
-    width:26px;height:26px;border-radius:50%;
-    background:var(--rust-600);
+  .hero-credential .badge{
+    width:22px;height:22px;border-radius:50%;
+    background:rgba(255,255,255,.15);
     display:inline-flex;align-items:center;justify-content:center;
-    color:var(--cream-50);font-size:12px;font-weight:700;
+    color:rgba(255,255,255,.9);font-size:11px;font-weight:700;
     flex:none;
   }
 
@@ -475,7 +481,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#top">Kewi<span>care</span></a>
+    <a class="logo" href="#top">Kewi<span>care</span> Safaris<small class="logo-tag">Explore. Discover. Belong.</small></a>
     <ul class="nav-links" id="nav-menu">
       <li><a href="#destinations">Destinations</a></li>
       <li><a href="#how-it-works">How it works</a></li>
@@ -551,16 +557,16 @@
     <div class="hero-scrim" aria-hidden="true"></div>
 
     <div class="hero-inner">
-      <span class="proof-strip">
-        <span class="avatar-stack" aria-hidden="true"><span></span><span></span><span></span></span>
-        <span><strong class="stars">★★★★★</strong> 4.8/5 from 1,200+ travelers</span>
-      </span>
       <h1>The Pearl of Africa, planned right.</h1>
       <p class="sub">Plan, book, and explore Uganda. Gorilla treks, safaris, and custom trips, all in one place.</p>
       <div class="hero-ctas">
         <a class="btn btn-rust" href="mailto:hello@kewicare.com?subject=Start%20planning%20my%20Uganda%20trip">Start planning</a>
         <a class="btn btn-outline-dark" href="#how-it-works">How it works</a>
       </div>
+      <p class="hero-credential">
+        <span class="badge">✓</span>
+        Licensed tour operator, based in Kampala. Guided by rangers who know the parks.
+      </p>
     </div>
 
     <div class="dest-strip">
@@ -575,11 +581,6 @@
       </div>
     </div>
   </section>
-
-  <p class="credibility">
-    <span class="badge">✓</span>
-      Licensed tour operator, based in Kampala. Trips guided by rangers who know the parks
-  </p>
 
   <!-- FEATURES -->
   <section id="how-it-works">
@@ -793,7 +794,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="logo" href="#top" style="color:var(--ink-900);">Kewi<span style="color:var(--rust-600);">care</span></a>
+        <a class="logo" href="#top" style="color:var(--ink-900);">Kewi<span style="color:var(--rust-600);">care</span> Safaris<small class="logo-tag" style="color:var(--ink-500);">Explore. Discover. Belong.</small></a>
         <p>Plan, book, and explore. All in one place.</p>
       </div>
       <div class="footer-cols">

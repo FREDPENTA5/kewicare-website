@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://kewicare.com/sitemap.xml
+Sitemap: https://kewicaresafaris.com/sitemap.xml

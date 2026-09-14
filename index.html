@@ -155,13 +155,17 @@
     border-bottom:1px solid var(--line-onDark);
   }
   .nav{display:flex;align-items:center;justify-content:space-between;height:76px;color:var(--cream-50);}
-  .logo{font-weight:700;font-size:19px;letter-spacing:-.01em;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;}
-  .logo span{color:var(--gold-300);}
+  .logo{
+    font-weight:800;font-size:22px;letter-spacing:.12em;
+    text-transform:uppercase;
+    display:flex;flex-direction:column;line-height:1;
+  }
   .logo-tag{
-    display:block;width:100%;
-    font-size:10.5px;font-weight:500;letter-spacing:.04em;
-    color:rgba(255,255,255,.5);
-    margin-top:-2px;
+    display:block;
+    font-size:9.5px;font-weight:500;letter-spacing:.22em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.4);
+    margin-top:4px;
   }
   .nav-links{display:flex;align-items:center;gap:34px;}
   .nav-links a{font-size:14.5px;font-weight:500;color:var(--cream-100);opacity:.85;}
@@ -481,7 +485,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#top">Kewi<span>care</span> Safaris<small class="logo-tag">Explore. Discover. Belong.</small></a>
+    <a class="logo" href="#top">Kewicare Safaris<small class="logo-tag">Explore. Discover. Belong.</small></a>
     <ul class="nav-links" id="nav-menu">
       <li><a href="#destinations">Destinations</a></li>
       <li><a href="#how-it-works">How it works</a></li>
@@ -794,7 +798,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="logo" href="#top" style="color:var(--ink-900);">Kewi<span style="color:var(--rust-600);">care</span> Safaris<small class="logo-tag" style="color:var(--ink-500);">Explore. Discover. Belong.</small></a>
+        <a class="logo" href="#top" style="color:var(--ink-900);">Kewicare Safaris<small class="logo-tag" style="color:var(--ink-500);">Explore. Discover. Belong.</small></a>
         <p>Plan, book, and explore. All in one place.</p>
       </div>
       <div class="footer-cols">

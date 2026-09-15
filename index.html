@@ -115,10 +115,8 @@
 
   .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
   .feature-card{background:var(--white);border:1px solid var(--grey-200);border-radius:var(--radius-lg);padding:30px 26px;box-shadow:0 2px 10px rgba(0,0,0,.04);transition:box-shadow .3s,transform .3s;position:relative;overflow:hidden;}
-  .feature-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),var(--green));opacity:0;transition:opacity .3s;}
-  .feature-card:hover{box-shadow:0 14px 40px rgba(0,0,0,.09);transform:translateY(-4px);}
-  .feature-card:hover::before{opacity:1;}
-  .feature-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px;}
+    .feature-card:hover{box-shadow:0 14px 40px rgba(0,0,0,.09);transform:translateY(-4px);}
+    .feature-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px;}
   .feature-icon-wrap{width:46px;height:46px;border-radius:12px;background:var(--grey-100);border:1px solid var(--grey-200);display:flex;align-items:center;justify-content:center;color:var(--orange);transition:background .25s,border-color .25s;}
   .feature-card:hover .feature-icon-wrap{background:rgba(232,98,42,.1);border-color:rgba(232,98,42,.2);}
   .feature-icon-wrap svg{width:20px;height:20px;}

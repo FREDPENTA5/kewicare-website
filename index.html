@@ -75,7 +75,7 @@
   header.scrolled{background:rgba(10,10,10,.99);box-shadow:0 4px 32px rgba(0,0,0,.35);border-bottom-color:transparent;}
   .nav{display:flex;align-items:center;justify-content:space-between;height:100px;color:var(--white);}
   .logo{display:flex;align-items:center;}
-  .logo-img{height:72px;width:auto;display:block;}
+  .logo-img{height:72px;width:auto;display:block;filter:drop-shadow(0 0 8px rgba(255,255,255,0.45)) drop-shadow(0 1px 2px rgba(255,255,255,0.6));}
   .nav-links{display:flex;align-items:center;gap:32px;}
   .nav-links a{font-size:13.5px;font-weight:500;color:rgba(255,255,255,.6);transition:color .2s;}
   .nav-links a:hover{color:var(--white);}
@@ -174,7 +174,7 @@
 
   footer{padding:64px 0 40px;background:var(--black);color:rgba(255,255,255,.55);border-top:1px solid var(--line-dark);}
   .footer-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid var(--line-dark);}
-  .footer-logo-img{height:72px;width:auto;display:block;margin-bottom:20px;}
+  .footer-logo-img{height:72px;width:auto;display:block;margin-bottom:20px;filter:drop-shadow(0 0 8px rgba(255,255,255,0.45)) drop-shadow(0 1px 2px rgba(255,255,255,0.6));}
   .footer-brand p{color:rgba(255,255,255,.4);font-size:14px;max-width:26ch;line-height:1.65;}
   .footer-cols{display:flex;gap:52px;flex-wrap:wrap;}
   .footer-col h4{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:rgba(255,255,255,.3);margin-bottom:16px;font-weight:600;}
@@ -206,7 +206,7 @@
     .dest-strip{padding:0 20px 40px;}
     .dest-chips span{font-size:12px;padding:5px 11px;}
     .feature-grid{gap:12px;}
-    .feature-card{padding:22px 18px;}
+    .feature-card{padding:28px 24px;}
     .compare-table th,.compare-table td{padding:12px 14px;font-size:13px;}
     .wall{grid-template-columns:1fr;}
     .final-cta{padding:44px 22px;}
@@ -315,50 +315,32 @@
       </div>
       <div class="feature-grid">
         <div class="feature-card reveal-up">
-          <div class="feature-header">
-            <div class="feature-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
-            <span class="modern-pill">PLANNED</span>
-          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
           <h3>Itinerary Builder</h3>
           <p>A day-by-day plan across parks, lodges, and activities. Adjust it any time before you fly.</p>
         </div>
         <div class="feature-card reveal-up">
-          <div class="feature-header">
-            <div class="feature-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg></div>
-            <span class="modern-pill">VERIFIED</span>
-          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
           <h3>Verified Stays &amp; Pricing</h3>
           <p>Every lodge and camp is inspected and priced up front, with no surprise mark-ups after booking.</p>
         </div>
         <div class="feature-card reveal-up">
-          <div class="feature-header">
-            <div class="feature-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg></div>
-            <span class="modern-pill">MATCHED</span>
-          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
           <h3>Local Guide Matching</h3>
           <p>Get paired with a licensed guide who knows the roads, the parks, and the wildlife.</p>
         </div>
         <div class="feature-card reveal-up">
-          <div class="feature-header">
-            <div class="feature-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
-            <span class="modern-pill">CONFIRMED</span>
-          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
           <h3>Permits &amp; Logistics</h3>
           <p>Gorilla permits, park fees, visas, and transfers, all confirmed before you land in Entebbe.</p>
         </div>
         <div class="feature-card reveal-up">
-          <div class="feature-header">
-            <div class="feature-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
-            <span class="modern-pill">4.8 STAR</span>
-          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
           <h3>Traveler Reviews</h3>
           <p>Real reviews from real Kewicare travelers, broken down park by park and lodge by lodge.</p>
         </div>
         <div class="feature-card reveal-up">
-          <div class="feature-header">
-            <div class="feature-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg></div>
-            <span class="modern-pill">CUSTOM</span>
-          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
           <h3>Custom Requests</h3>
           <p>Tell us what you want to see and who is coming. We will build a package around it.</p>
         </div>

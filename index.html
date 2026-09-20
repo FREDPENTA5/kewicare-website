@@ -91,7 +91,7 @@
     .nav-actions .btn-ghost{display:none;}
   }
 
-  .hero{position:relative;background:var(--black);color:var(--white);overflow:hidden;min-height:65svh;display:flex;flex-direction:column;}
+  .hero{position:relative;background:var(--black);color:var(--white);overflow:hidden;min-height:90svh;display:flex;flex-direction:column;}
   .hero-art{position:absolute;inset:0;width:100%;height:100%;}
   .hero-art svg{width:100%;height:100%;}
   .hero-scrim{position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,10,10,.5) 0%,rgba(10,10,10,.35) 40%,rgba(10,10,10,.78) 75%,rgba(10,10,10,.97) 100%);}
@@ -569,6 +569,28 @@
   });
   const header = document.querySelector("header");
   window.addEventListener("scroll", () => { header.classList.toggle("scrolled", window.scrollY > 20); }, { passive: true });
+
+  // Auto-scroll destinations
+  const destCarousel = document.querySelector('.dest-carousel');
+  if (destCarousel) {
+    let isHovered = false;
+    destCarousel.addEventListener('mouseenter', () => isHovered = true);
+    destCarousel.addEventListener('mouseleave', () => isHovered = false);
+    destCarousel.addEventListener('touchstart', () => isHovered = true, {passive: true});
+    destCarousel.addEventListener('touchend', () => setTimeout(() => isHovered = false, 3000), {passive: true});
+
+    setInterval(() => {
+      if (isHovered) return;
+      // Get the width of one card plus its gap (280px + 16px)
+      const cardWidth = 296; 
+      // If we are at the end, scroll back to start
+      if (destCarousel.scrollLeft + destCarousel.clientWidth >= destCarousel.scrollWidth - 10) {
+        destCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        destCarousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
+    }, 3500);
+  }
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>

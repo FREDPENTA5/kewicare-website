@@ -75,7 +75,7 @@
   header.scrolled{background:rgba(10,10,10,.99);box-shadow:0 4px 32px rgba(0,0,0,.35);border-bottom-color:transparent;}
   .nav{display:flex;align-items:center;justify-content:space-between;height:100px;color:var(--white);}
   .logo{display:flex;align-items:center;}
-  .logo-img{height:72px;width:auto;display:block;filter:drop-shadow(0 0 8px rgba(255,255,255,0.45)) drop-shadow(0 1px 2px rgba(255,255,255,0.6));}
+  .logo-img{height:72px;width:auto;display:block;}
   .nav-links{display:flex;align-items:center;gap:32px;}
   .nav-links a{font-size:13.5px;font-weight:500;color:rgba(255,255,255,.6);transition:color .2s;}
   .nav-links a:hover{color:var(--white);}
@@ -169,7 +169,7 @@
 
   footer{padding:64px 0 40px;background:var(--black);color:rgba(255,255,255,.55);border-top:1px solid var(--line-dark);}
   .footer-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid var(--line-dark);}
-  .footer-logo-img{height:72px;width:auto;display:block;margin-bottom:20px;filter:drop-shadow(0 0 8px rgba(255,255,255,0.45)) drop-shadow(0 1px 2px rgba(255,255,255,0.6));}
+  .footer-logo-img{height:72px;width:auto;display:block;margin-bottom:20px;}
   .footer-brand p{color:rgba(255,255,255,.4);font-size:14px;max-width:26ch;line-height:1.65;}
   .footer-cols{display:flex;gap:52px;flex-wrap:wrap;}
   .footer-col h4{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:rgba(255,255,255,.3);margin-bottom:16px;font-weight:600;}
@@ -198,8 +198,8 @@
     .hero .sub{font-size:15px;}
     .hero-ctas{flex-direction:column;align-items:stretch;width:100%;max-width:310px;}
     .hero-ctas .btn{width:100%;justify-content:center;padding:15px 20px;}
-    .dest-strip{padding:0 20px 40px;}
-    .dest-chips span{font-size:12px;padding:5px 11px;}
+    .dest-carousel-wrap{padding-bottom:40px;}
+    
     .feature-grid{gap:12px;}
     .feature-card{padding:28px 24px;}
     .compare-table th,.compare-table td{padding:12px 14px;font-size:13px;}
@@ -287,16 +287,65 @@
       </div>
       <p class="hero-credential">Licensed tour operator, Kampala. Guided by rangers who know the parks.</p>
     </div>
-    <div class="dest-strip" id="destinations">
+    <div class="dest-carousel-wrap" id="destinations">
       <span class="dest-strip-label">Featured Destinations</span>
-      <div class="dest-chips">
-          <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-8"/><path d="m5 14 7-10 7 10"/><path d="m5 22 7-10 7 10"/></svg>Bwindi Impenetrable Forest</span>
-          <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>Murchison Falls</span>
-          <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10h4"/><path d="M19 7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3"/><path d="M20 21a2 2 0 0 0 2-2v-3.851c0-1.39-2-2.962-2-4.829V8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2z"/><path d="M 9 7 V 4 a 1 1 0 0 0 -1 -1 H 6 a 1 1 0 0 0 -1 1 v 3"/><path d="M 11 21 a 2 2 0 0 0 -2 -2 v -3.851 c 0 -1.39 -2 -2.962 -2 -4.829 V 8 a 1 1 0 0 0 -1 -1 H 2 a 1 1 0 0 0 -1 1 v 11 a 2 2 0 0 0 2 2 z"/></svg>Queen Elizabeth NP</span>
-          <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>Kidepo Valley</span>
-          <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>Ssese Islands</span>
-          <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Jinja &amp; the Nile</span>
+      <div class="dest-carousel">
+        
+        <div class="dest-card-dark">
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-8"/><path d="m5 14 7-10 7 10"/><path d="m5 22 7-10 7 10"/></svg>Bwindi Forest</h4>
+          <div class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Southwestern Uganda</div>
+          <div class="stats">
+            <div class="stat"><span>400+</span>Gorillas</div>
+            <div class="stat"><span>321</span>Sq Km</div>
+          </div>
         </div>
+
+        <div class="dest-card-dark">
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>Murchison Falls</h4>
+          <div class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Northwestern Uganda</div>
+          <div class="stats">
+            <div class="stat"><span>43m</span>Drop</div>
+            <div class="stat"><span>76</span>Mammal Spp</div>
+          </div>
+        </div>
+
+        <div class="dest-card-dark">
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10h4"/><path d="M19 7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3"/><path d="M20 21a2 2 0 0 0 2-2v-3.851c0-1.39-2-2.962-2-4.829V8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2z"/><path d="M 9 7 V 4 a 1 1 0 0 0 -1 -1 H 6 a 1 1 0 0 0 -1 1 v 3"/><path d="M 11 21 a 2 2 0 0 0 -2 -2 v -3.851 c 0 -1.39 -2 -2.962 -2 -4.829 V 8 a 1 1 0 0 0 -1 -1 H 2 a 1 1 0 0 0 -1 1 v 11 a 2 2 0 0 0 2 2 z"/></svg>Queen Elizabeth NP</h4>
+          <div class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Western Uganda</div>
+          <div class="stats">
+            <div class="stat"><span>600+</span>Bird Spp</div>
+            <div class="stat"><span>95</span>Mammal Spp</div>
+          </div>
+        </div>
+
+        <div class="dest-card-dark">
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>Kidepo Valley</h4>
+          <div class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Northeastern Uganda</div>
+          <div class="stats">
+            <div class="stat"><span>77</span>Mammal Spp</div>
+            <div class="stat"><span>1,442</span>Sq Km</div>
+          </div>
+        </div>
+
+        <div class="dest-card-dark">
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>Ssese Islands</h4>
+          <div class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Lake Victoria</div>
+          <div class="stats">
+            <div class="stat"><span>84</span>Islands</div>
+            <div class="stat"><span>27.5k</span>Sq Km Lake</div>
+          </div>
+        </div>
+
+        <div class="dest-card-dark">
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Jinja &amp; the Nile</h4>
+          <div class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eastern Uganda</div>
+          <div class="stats">
+            <div class="stat"><span>6,650km</span>River</div>
+            <div class="stat"><span>Grade 5</span>Rapids</div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 

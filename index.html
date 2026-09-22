@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,27 +9,27 @@
 <meta name="description" content="Plan gorilla trekking, wildlife safaris, and custom Uganda trips with Kewicare Safaris. Itineraries, permits, and local guides handled end to end.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0a0a0a">
-<link rel="canonical" href="https://kewicaresafaris.com/">
+<link rel="canonical" href="https://kewicare.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kewicare Safaris">
 <meta property="og:title" content="Kewicare Safaris | Gorilla Trekking &amp; Custom Uganda Trips">
 <meta property="og:description" content="Plan gorilla trekking, wildlife safaris, and custom Uganda trips with Kewicare.">
-<meta property="og:url" content="https://kewicaresafaris.com/">
-<meta property="og:image" content="https://kewicaresafaris.com/logos/kewicare-logo-500px.png">
+<meta property="og:url" content="https://kewicare.com/">
+<meta property="og:image" content="https://kewicare.com/logos/kewicare-logo-500px.png">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Kewicare Safaris | Uganda Safaris &amp; Gorilla Trekking">
 <meta name="twitter:description" content="Plan gorilla trekking, wildlife safaris, and custom Uganda trips.">
-<meta name="twitter:image" content="https://kewicaresafaris.com/logos/kewicare-logo-500px.png">
+<meta name="twitter:image" content="https://kewicare.com/logos/kewicare-logo-500px.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Kewicare Safaris",
-  "url": "https://kewicaresafaris.com/"
+  "url": "https://kewicare.com/"
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TravelAgency","name":"Kewicare Safaris","description":"Plan gorilla trekking, wildlife safaris, and custom trips across Uganda with local guides, permits, and itineraries handled end to end.","url":"https://kewicaresafaris.com/","image":"https://kewicaresafaris.com/uganda-safari.jpg","logo":"https://kewicaresafaris.com/logos/kewicare-logo-1000px.png","address":{"@type":"PostalAddress","addressLocality":"Kampala","addressCountry":"UG"},"areaServed":{"@type":"Country","name":"Uganda"},"priceRange":"$$","sameAs":[]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TravelAgency","name":"Kewicare Safaris","description":"Plan gorilla trekking, wildlife safaris, and custom trips across Uganda with local guides, permits, and itineraries handled end to end.","url":"https://kewicare.com/","image":"https://kewicare.com/uganda-safari.jpg","logo":"https://kewicare.com/logos/kewicare-logo-1000px.png","address":{"@type":"PostalAddress","addressLocality":"Kampala","addressCountry":"UG"},"areaServed":{"@type":"Country","name":"Uganda"},"priceRange":"$$","sameAs":[]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is it cheaper to book everything myself?","acceptedAnswer":{"@type":"Answer","text":"Sometimes the sticker price looks lower, but permits, park fees, and road transport in Uganda are easy to underestimate. Our pricing is upfront with no mark-ups."}},{"@type":"Question","name":"Do you handle visas and gorilla permits?","acceptedAnswer":{"@type":"Answer","text":"Yes. Visa guidance, gorilla and chimp permits, and park entry fees are arranged and confirmed before you travel."}},{"@type":"Question","name":"What happens if my flight is delayed?","acceptedAnswer":{"@type":"Answer","text":"Your Kewicare contact is reachable 24/7 while you are in-country. Transfers and the first day of your itinerary are adjusted at no extra cost."}},{"@type":"Question","name":"Can you build a custom trip for my group?","acceptedAnswer":{"@type":"Answer","text":"Yes. Tell us your dates, budget, and what you want to see and we will build an itinerary around your group."}},{"@type":"Question","name":"Do I need to pay in full upfront?","acceptedAnswer":{"@type":"Answer","text":"No. A deposit secures your dates and permits, with the balance due closer to travel."}},{"@type":"Question","name":"What is your cancellation policy?","acceptedAnswer":{"@type":"Answer","text":"Cancellation terms depend on how close to departure you cancel. Full terms are sent with your itinerary."}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,7 +91,37 @@
     .nav-actions .btn-ghost{display:none;}
   }
 
-  .hero{position:relative;background:var(--black);color:var(--white);overflow:hidden;min-height:90svh;display:flex;flex-direction:column;}
+    .hero-marquee {
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 5;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    pointer-events: none;
+    opacity: 0.6;
+    transform: rotate(-2deg) scale(1.05);
+  }
+  .hero-marquee-track {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    animation: marquee-hero 45s linear infinite;
+  }
+  .h-card {
+    width: 240px;
+    height: 320px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  }
+  @keyframes marquee-hero {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 8px)); }
+  }
+  .hero{position:relative;background:var(--black);color:var(--white);overflow:hidden;min-height:100svh;display:flex;flex-direction:column;}
   .hero-art{position:absolute;inset:0;width:100%;height:100%;}
   .hero-art svg{width:100%;height:100%;}
   .hero-scrim{position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,10,10,.5) 0%,rgba(10,10,10,.35) 40%,rgba(10,10,10,.78) 75%,rgba(10,10,10,.97) 100%);}
@@ -238,7 +268,7 @@
     </ul>
     <div class="nav-actions">
       <a class="btn btn-ghost" href="#how-it-works">How it works</a>
-      <a class="btn btn-primary" href="mailto:hello@kewicaresafaris.com?subject=Start%20planning%20my%20Uganda%20trip">Start planning</a>
+      <a class="btn btn-primary" href="mailto:hello@kewicare.com?subject=Start%20planning%20my%20Uganda%20trip">Start planning</a>
       <button id="nav-toggle-btn" class="nav-toggle-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
         <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         <svg class="icon-close" style="display:none;" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -290,15 +320,32 @@
       <h1>The Pearl of <em>Africa,</em> planned right.</h1>
       <p class="sub">Gorilla treks, wildlife safaris, and custom Uganda trips. Permits, guides, and every detail handled end to end.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="mailto:hello@kewicaresafaris.com?subject=Start%20planning%20my%20Uganda%20trip">Start planning</a>
+        <a class="btn btn-primary" href="mailto:hello@kewicare.com?subject=Start%20planning%20my%20Uganda%20trip">Start planning</a>
         <a class="btn btn-ghost" href="#how-it-works">How it works</a>
       </div>
       <p class="hero-credential">Licensed tour operator, Kampala. Guided by rangers who know the parks.</p>
     </div>
+      <div class="hero-marquee">
+      <div class="hero-marquee-track">
+        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1614531341773-3bff8b7cb3fc?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1439886183900-e79ec0057170?auto=format&fit=crop&w=400&q=80');"></div>
+        <!-- clones for infinite scroll -->
+        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1614531341773-3bff8b7cb3fc?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1439886183900-e79ec0057170?auto=format&fit=crop&w=400&q=80');"></div>
+      </div>
+    </div>
   </section>
 
   <!-- DESTINATIONS -->
-  <section style="background: var(--black); padding-top: 0; padding-bottom: 24px;">
+  <section style="background: var(--black); padding-top: 96px; padding-bottom: 64px;">
     <div class="dest-carousel-wrap" id="destinations">
       <span class="dest-strip-label">Featured Destinations</span>
       <p style="color:rgba(255,255,255,.65); font-size:16px; font-weight:400; max-width:42ch; margin:0 auto 32px; line-height:1.6;">Explore the most popular parks, reserves, and wildlife regions in Uganda.</p>
@@ -359,7 +406,7 @@
           </div>
         </div>
 
-        <div class="dest-card-img" style="background-image: url('https://images.unsplash.com/photo-1533241280387-a36c4b277aa4?auto=format&fit=crop&w=600&q=80');">
+        <div class="dest-card-img" style="background-image: url('https://images.unsplash.com/photo-1439886183900-e79ec0057170?auto=format&fit=crop&w=600&q=80');">
           <div class="dest-card-content">
             <h4>Jinja &amp; the Nile</h4>
             <div class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eastern Uganda</div>
@@ -453,7 +500,7 @@
           </div>
         </div>
         <div class="compare-cta">
-          <a class="btn btn-primary" href="mailto:hello@kewicaresafaris.com?subject=Start%20planning%20my%20Uganda%20trip">Start planning your trip</a>
+          <a class="btn btn-primary" href="mailto:hello@kewicare.com?subject=Start%20planning%20my%20Uganda%20trip">Start planning your trip</a>
           <p style="margin-top:16px; font-size:13px; color:rgba(255,255,255,.35);">Most trips are confirmed within 48 hours.</p>
         </div>
     </div>
@@ -502,7 +549,7 @@
       <div class="final-cta">
         <h2>Build a trip you are excited to take.</h2>
         <p class="sub-text">Start with what you have in mind. Kewicare will help you shape it into an itinerary.</p>
-        <a class="btn btn-primary" href="mailto:hello@kewicaresafaris.com?subject=Start%20planning%20my%20Uganda%20trip">Start your trip</a>
+        <a class="btn btn-primary" href="mailto:hello@kewicare.com?subject=Start%20planning%20my%20Uganda%20trip">Start your trip</a>
         <p class="promo"><b>SAFARI15</b> applied automatically for 15% off your first booking</p>
       </div>
     </div>
@@ -570,27 +617,7 @@
   const header = document.querySelector("header");
   window.addEventListener("scroll", () => { header.classList.toggle("scrolled", window.scrollY > 20); }, { passive: true });
 
-  // Auto-scroll destinations
-  const destCarousel = document.querySelector('.dest-carousel');
-  if (destCarousel) {
-    let isHovered = false;
-    destCarousel.addEventListener('mouseenter', () => isHovered = true);
-    destCarousel.addEventListener('mouseleave', () => isHovered = false);
-    destCarousel.addEventListener('touchstart', () => isHovered = true, {passive: true});
-    destCarousel.addEventListener('touchend', () => setTimeout(() => isHovered = false, 3000), {passive: true});
 
-    setInterval(() => {
-      if (isHovered) return;
-      // Get the width of one card plus its gap (280px + 16px)
-      const cardWidth = 296; 
-      // If we are at the end, scroll back to start
-      if (destCarousel.scrollLeft + destCarousel.clientWidth >= destCarousel.scrollWidth - 10) {
-        destCarousel.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        destCarousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
-      }
-    }, 3500);
-  }
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>

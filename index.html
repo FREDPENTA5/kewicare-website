@@ -92,36 +92,8 @@
     .nav-actions .btn-ghost{display:none;}
   }
 
-    .hero-marquee {
-    position: absolute;
-    bottom: -80px;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    z-index: 5;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    pointer-events: none;
-    opacity: 0.6;
-    transform: rotate(-2deg) scale(1.05);
-  }
-  .hero-marquee-track {
-    display: flex;
-    gap: 16px;
-    width: max-content;
-    animation: marquee-hero 45s linear infinite;
-  }
-  .h-card {
-    width: 240px;
-    height: 320px;
-    border-radius: 16px;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-  }
-  @keyframes marquee-hero {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-50% - 8px)); }
-  }
+
+
   .hero{position:relative;background:var(--black);color:var(--white);overflow:hidden;min-height:100svh;display:flex;flex-direction:column;}
   .hero-art{position:absolute;inset:0;width:100%;height:100%;}
   .hero-art svg{width:100%;height:100%;}
@@ -133,10 +105,12 @@
   .hero-ctas{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap;justify-content:center;}
   .hero-credential{margin-top:32px;font-size:13px;font-weight:500;color:rgba(255,255,255,.45);}
   
-    .dest-carousel-wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-bottom:64px;position:relative;z-index:2;text-align:center;}
+    .dest-carousel-wrap{width:100%;margin-inline:auto;padding-bottom:64px;position:relative;z-index:2;text-align:center;overflow:hidden;}
   .dest-strip-label{font-family:var(--font-sans);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:24px;display:inline-block;padding-inline:24px;}
-  .dest-carousel{display:flex;gap:16px;overflow-x:auto;padding:0 24px 20px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;text-align:left;}
-  .dest-carousel::-webkit-scrollbar{display:none;}
+  .dest-carousel{display:flex;gap:16px;padding:0 24px 20px;text-align:left;overflow:hidden;}
+  .dest-carousel.marquee-active{width:max-content;padding:0 0 20px;animation:dest-scroll 40s linear infinite;}
+  .dest-carousel.marquee-active:hover{animation-play-state:paused;}
+  @keyframes dest-scroll{0%{transform:translateX(0);}100%{transform:translateX(calc(-50% - 8px));}}
   .dest-card-img{flex:0 0 280px;height:400px;border-radius:var(--radius-md);scroll-snap-align:start;position:relative;overflow:hidden;background-color:var(--black);background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;box-shadow:0 12px 30px rgba(0,0,0,0.3);transition:transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);}
   .dest-card-img:hover{transform:translateY(-8px);}
   .dest-card-img::before{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);z-index:1;}
@@ -325,23 +299,6 @@
         <a class="btn btn-ghost" href="#how-it-works">How it works</a>
       </div>
       <p class="hero-credential">Licensed tour operator, Kampala. Guided by rangers who know the parks.</p>
-    </div>
-      <div class="hero-marquee">
-      <div class="hero-marquee-track">
-        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=400&q=80');"></div>
-        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=400&q=80');"></div>
-        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=400&q=80');"></div>
-        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1614531341773-3bff8b7cb3fc?auto=format&fit=crop&w=400&q=80');"></div>
-        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?auto=format&fit=crop&w=400&q=80');"></div>
-        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1439886183900-e79ec0057170?auto=format&fit=crop&w=400&q=80');"></div>
-        <!-- clones for infinite scroll -->
-        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=400&q=80');"></div>
-        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=400&q=80');"></div>
-        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=400&q=80');"></div>
-        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1614531341773-3bff8b7cb3fc?auto=format&fit=crop&w=400&q=80');"></div>
-        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?auto=format&fit=crop&w=400&q=80');"></div>
-        <div class="h-card" style="background-image: url('https://images.unsplash.com/photo-1439886183900-e79ec0057170?auto=format&fit=crop&w=400&q=80');"></div>
-      </div>
     </div>
   </section>
 
@@ -617,7 +574,17 @@
   });
   const header = document.querySelector("header");
   window.addEventListener("scroll", () => { header.classList.toggle("scrolled", window.scrollY > 20); }, { passive: true });
-
+  // Continuous scroll for destination cards
+  const destCarousel = document.querySelector('.dest-carousel');
+  if (destCarousel) {
+    const cards = Array.from(destCarousel.children);
+    cards.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      destCarousel.appendChild(clone);
+    });
+    destCarousel.classList.add('marquee-active');
+  }
 
 </script>
 <script defer src="/_vercel/insights/script.js"></script>

@@ -198,6 +198,7 @@ footer{padding:64px 0 40px;background:var(--black);color:rgba(255,255,255,.55);b
 
 /* --- Breadcrumbs --- */
 .breadcrumb{padding:16px 0 0;font-size:13px;color:var(--grey-400);}
+.breadcrumb ol,.breadcrumb ul,.breadcrumb-list{list-style:none;margin:0;padding:0;}
 .breadcrumb a{color:var(--grey-600);transition:color .2s;}
 .breadcrumb a:hover{color:var(--orange);}
 .breadcrumb span{margin:0 8px;color:var(--grey-200);}

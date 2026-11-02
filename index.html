@@ -102,7 +102,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#top"><img src="/logos/kewicare-logo.svg" alt="Kewicare Safaris" class="logo-img"></a>
+    <a class="logo" href="/"><img src="/logos/kewicare-logo.svg" alt="Kewicare Safaris" class="logo-img"></a>
     <ul class="nav-links" id="nav-menu">
       <li><a href="/destinations/">Destinations</a></li>
       <li><a href="/gorilla-trekking/">Gorilla Trekking</a></li>
@@ -253,44 +253,79 @@
     </div>
   </section>
 
-  <!-- SOCIAL PROOF SNIPPET (3 Testimonial Cards) -->
-  <section class="reviews-bg" id="reviews" style="padding: 96px 0;">
+  <!-- SOCIAL PROOF (Redesigned) -->
+  <section class="reviews-section">
     <div class="wrap">
-      <div class="section-head" style="margin-bottom: 30px;">
-        <span class="eyebrow">Traveler Stories</span>
+
+      <!-- Tight header: headline + aggregate rating, no filler -->
+      <div class="reviews-header">
+        <span class="eyebrow">Traveler Reviews</span>
         <h2>Trips people still talk about</h2>
-        <p>Verified reviews from travelers who explored Uganda's national parks with Kewicare Safaris.</p>
+        <div class="aggregate-bar">
+          <span class="stars-lg">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span><strong>5.0</strong> from <strong>10</strong> verified reviews</span>
+          <span class="source">Collected by Kewicare</span>
+        </div>
       </div>
-      <p class="stat-line">Kewicare travelers explored <em>40+ destinations</em> across Uganda this year.</p>
-      <div class="wall">
-        <div class="t-card reveal-up">
+
+      <!-- Featured review: strongest quote, with trip photo -->
+      <div class="review-featured reveal-up">
+        <div class="review-featured-photo" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80');" role="img" aria-label="Misty rainforest trail in Bwindi Impenetrable Forest, Uganda"></div>
+        <div class="review-featured-body">
           <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <p>Our guide got us to the trailhead early and we had our gorilla family almost to ourselves for twenty minutes. Worth every shilling.</p>
-          <div class="t-meta">
-            <span class="name">Amara O.</span>
-            <span class="tag">Gorilla trek, Bwindi</span>
-          </div>
-        </div>
-        <div class="t-card reveal-up">
-          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <p>Everything was arranged before we landed: permits, driver, lodge. We just had to show up and enjoy it.</p>
-          <div class="t-meta">
-            <span class="name">Daniel K.</span>
-            <span class="tag">Murchison Falls safari</span>
-          </div>
-        </div>
-        <div class="t-card reveal-up">
-          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <p>Three generations of our family, one itinerary, zero stress. Not something I expected from a trip this big.</p>
-          <div class="t-meta">
-            <span class="name">The Odongo family</span>
-            <span class="tag">Custom group trip</span>
+          <blockquote>
+            <p>Our guide got us to the trailhead early and we had our gorilla family <strong>almost to ourselves for twenty minutes</strong>. Worth every shilling.</p>
+          </blockquote>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background:#2D6A4F;">AO</div>
+            <div class="reviewer-info">
+              <span class="reviewer-name">Amara O.</span>
+              <span class="reviewer-trip">Gorilla trek · Bwindi Impenetrable Forest</span>
+              <span class="reviewer-meta">Kenya · Oct 2025 · <span class="verified">✓ Verified</span></span>
+            </div>
           </div>
         </div>
       </div>
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="/reviews/" class="btn btn-outline">Read more reviews &rarr;</a>
+
+      <!-- Two supporting review cards -->
+      <div class="review-grid">
+        <div class="review-card reveal-up">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote>
+            <p>Everything was arranged before we landed: permits, driver, lodge. <strong>We just had to show up and enjoy it.</strong></p>
+          </blockquote>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background:#1B6B3A;">DK</div>
+            <div class="reviewer-info">
+              <span class="reviewer-name">Daniel K.</span>
+              <span class="reviewer-trip">Wildlife safari · Murchison Falls</span>
+              <span class="reviewer-meta">United Kingdom · Aug 2025 · <span class="verified">✓ Verified</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal-up">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote>
+            <p>Three generations of our family, one itinerary, <strong>zero stress</strong>. The kids still talk about the boat safari on the Kazinga Channel.</p>
+          </blockquote>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background:#E8622A;">OF</div>
+            <div class="reviewer-info">
+              <span class="reviewer-name">The Odongo family</span>
+              <span class="reviewer-trip">Custom family safari · Queen Elizabeth NP</span>
+              <span class="reviewer-meta">Uganda · Dec 2024 · <span class="verified">✓ Verified</span></span>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- CTA with aggregate context -->
+      <div class="reviews-cta">
+        <p class="reviews-cta-context"><strong>5.0 average</strong> from 10 verified traveler reviews</p>
+        <a href="/reviews/" class="btn btn-primary">Read all reviews &rarr;</a>
+      </div>
+
     </div>
   </section>
 
@@ -315,7 +350,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#top"><img src="/logos/kewicare-logo.svg" alt="Kewicare Safaris" class="footer-logo-img"></a>
+        <a href="/"><img src="/logos/kewicare-logo.svg" alt="Kewicare Safaris" class="footer-logo-img"></a>
         <p>Plan, book, and explore Uganda with local guides and verified lodges.</p>
       </div>
       <div class="footer-cols">

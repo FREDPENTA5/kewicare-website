@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found (404) | Kewicare Safaris</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" type="image/png" href="/logos/favicon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/logos/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/logos/favicon-192.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .error-hero {
+      background: var(--black);
+      color: var(--white);
+      min-height: calc(100vh - 100px - 260px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 96px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .error-hero::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--orange-glow) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .error-box {
+      position: relative;
+      z-index: 2;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .error-code {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 18px;
+      display: inline-block;
+      font-weight: 600;
+    }
+    .error-hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      color: var(--white);
+    }
+    .error-hero .error-sub {
+      font-size: clamp(16px, 2vw, 19px);
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.65;
+      margin-bottom: 36px;
+      max-width: 44ch;
+      margin-inline: auto;
+    }
+    .error-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .error-links {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--line-dark);
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 13.5px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .error-links a {
+      color: rgba(255, 255, 255, 0.8);
+      transition: color 0.2s;
+    }
+    .error-links a:hover {
+      color: var(--orange);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SHARED HEADER -->
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="/"><img src="/logos/kewicare-logo.svg" alt="Kewicare Safaris" class="logo-img"></a>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="/destinations/">Destinations</a></li>
+        <li><a href="/gorilla-trekking/">Gorilla Trekking</a></li>
+        <li><a href="/safari-packages/">Safari Packages</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/reviews/">Reviews</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="/contact/">Start planning</a>
+        <button id="nav-toggle-btn" class="nav-toggle-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+          <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-close" style="display:none;" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="error-hero">
+      <div class="wrap">
+        <div class="error-box">
+          <span class="error-code">404 Error</span>
+          <h1>Page not found</h1>
+          <p class="error-sub">The trail went cold. Let us help you find your way.</p>
+          <div class="error-actions">
+            <a href="/" class="btn btn-primary">Go to Home</a>
+            <a href="/contact/" class="btn btn-ghost">Contact Us</a>
+          </div>
+          <nav class="error-links" aria-label="Popular safari pages">
+            <span>Popular pages:</span>
+            <a href="/destinations/">Destinations</a>
+            <a href="/gorilla-trekking/">Gorilla Trekking</a>
+            <a href="/safari-packages/">Safari Packages</a>
+            <a href="/faq/">FAQ</a>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SHARED FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/"><img src="/logos/kewicare-logo.svg" alt="Kewicare Safaris" class="footer-logo-img"></a>
+          <p>Plan, book, and explore Uganda with local guides and verified lodges.</p>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="/destinations/">Destinations</a>
+            <a href="/gorilla-trekking/">Gorilla Trekking</a>
+            <a href="/safari-packages/">Safari Packages</a>
+            <a href="/how-it-works/">How It Works</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="/about/">About Kewicare</a>
+            <a href="/reviews/">Reviews</a>
+            <a href="/faq/">FAQ</a>
+            <a href="/contact/">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="#">Terms &amp; Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cancellation Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&#169; 2026 Kewicare Safaris. All rights reserved.</span>
+        <span>Kampala, Uganda</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SHARED SCRIPTS -->
+  <script src="/js/main.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98FLEWZEX5"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-98FLEWZEX5");</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

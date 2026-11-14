@@ -11,6 +11,7 @@
 <link rel="apple-touch-icon" sizes="192x192" href="/logos/favicon-192.png">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0a0a0a">
+<meta name="application-name" content="Kewicare Safaris">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
@@ -39,16 +40,24 @@
 <!-- Shared Stylesheet -->
 <link rel="stylesheet" href="/css/styles.css">
 
-<!-- Structured Data: WebSite with SearchAction -->
+<!-- Structured Data: WebSite with SearchAction and Alternate Names -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://kewicare.com/#website",
   "name": "Kewicare Safaris",
+  "alternateName": ["Kewicare", "Kewicares", "kewicare.com", "Kewicare Safaris Uganda"],
   "url": "https://kewicare.com/",
+  "publisher": {
+    "@id": "https://kewicare.com/#organization"
+  },
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://kewicare.com/destinations/?q={search_term_string}",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://kewicare.com/destinations/?q={search_term_string}"
+    },
     "query-input": "required name=search_term_string"
   }
 }
@@ -59,7 +68,9 @@
 {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
+  "@id": "https://kewicare.com/#organization",
   "name": "Kewicare Safaris",
+  "alternateName": "Kewicare",
   "description": "Plan gorilla trekking, wildlife safaris, and custom Uganda trips with Kewicare Safaris. Permits, local guides, and itineraries handled end to end.",
   "url": "https://kewicare.com/",
   "image": "https://kewicare.com/uganda-safari.jpg",

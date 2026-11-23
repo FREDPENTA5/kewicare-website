@@ -316,7 +316,22 @@ footer{padding:64px 0 40px;background:var(--black);color:rgba(255,255,255,.55);b
 .stats-row{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;padding:40px 0;}
 .stat-item{text-align:center;min-width:120px;}
 .stat-item .stat-number{font-size:clamp(28px,4vw,42px);font-weight:700;color:var(--orange);letter-spacing:-0.02em;}
-.stat-item .stat-label{font-size:13px;color:var(--grey-400);text-transform:uppercase;letter-spacing:.04em;margin-top:4px;}
+/* --- Itinerary Details Accordion --- */
+.itinerary-details{margin:18px 0;background:var(--grey-50);border:1px solid var(--grey-200);border-radius:var(--radius-sm);overflow:hidden;}
+.itinerary-toggle{padding:12px 16px;font-size:13.5px;font-weight:600;color:var(--orange-deep);cursor:pointer;display:flex;align-items:center;justify-content:space-between;user-select:none;list-style:none;background:rgba(232,98,42,.05);border-bottom:1px solid transparent;transition:background .2s;}
+.itinerary-toggle:hover{background:rgba(232,98,42,.1);}
+.itinerary-toggle::-webkit-details-marker{display:none;}
+.itinerary-toggle svg{transition:transform .25s ease;color:var(--orange-deep);}
+.itinerary-details[open] .itinerary-toggle{border-bottom-color:var(--grey-200);}
+.itinerary-details[open] .itinerary-toggle svg{transform:rotate(180deg);}
+.itinerary-timeline{padding:16px;display:flex;flex-direction:column;gap:16px;}
+.itinerary-day{display:flex;gap:12px;align-items:flex-start;}
+.day-badge{background:var(--black);color:var(--white);font-size:11px;font-weight:700;padding:4px 8px;border-radius:4px;white-space:nowrap;margin-top:2px;font-family:var(--font-mono);flex-shrink:0;}
+.day-content{flex:1;}
+.day-content h4{font-size:14px;font-weight:700;color:var(--black);margin:0 0 6px;line-height:1.4;}
+.day-content p{font-size:13px;color:var(--grey-600);line-height:1.6;margin:0 0 8px;}
+.day-meta{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--grey-800);background:var(--white);padding:8px 12px;border-radius:4px;border:1px solid var(--grey-200);margin-top:6px;}
+.day-meta span strong{color:var(--orange-deep);}
 
 /* --- Responsive overrides --- */
 @media(max-width:900px){.wall{grid-template-columns:repeat(2,1fr);}.footer-cols{gap:28px;}}

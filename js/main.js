@@ -118,7 +118,7 @@ if (destCarousel && destCarousel.children.length > 0) {
   document.head.appendChild(style);
 
   const btn = document.createElement('a');
-  btn.href = 'https://wa.me/256771188630?text=Hello%20Kewicare%20Safaris%2C%20I%27d%20like%20to%20enquire%20about%20a%20Uganda%20safari.';
+  btn.href = 'https://wa.me/256731985269?text=Hello%20Kewicare%20Safaris%2C%20I%27d%20like%20to%20enquire%20about%20a%20Uganda%20safari.';
   btn.target = '_blank';
   btn.rel = 'noopener noreferrer';
   btn.className = 'wa-fab';

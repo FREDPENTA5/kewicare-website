@@ -312,6 +312,21 @@ footer{padding:64px 0 40px;background:var(--black);color:rgba(255,255,255,.55);b
 .info-box h4{font-size:16px;font-weight:600;color:var(--orange-deep);margin-bottom:8px;}
 .info-box p{font-size:14.5px;color:var(--grey-600);line-height:1.65;margin-bottom:0;}
 
+/* --- Merchant Payment Card --- */
+.payment-card{margin-top:40px;background:var(--grey-50);border:1px solid var(--grey-200);border-radius:var(--radius-md);padding:32px;}
+.payment-card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--grey-200);}
+.payment-card-head h3{font-size:20px;font-weight:600;color:var(--black);margin:4px 0 6px;}
+.payment-card-head p{font-size:14px;color:var(--grey-600);margin:0;line-height:1.6;}
+.payment-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;background:rgba(232,98,42,.12);color:var(--orange-deep);font-family:var(--font-mono);font-size:11.5px;font-weight:600;white-space:nowrap;}
+.payment-details-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.payment-detail-item{background:var(--white);border:1px solid var(--grey-200);border-radius:var(--radius-sm);padding:16px 18px;}
+.payment-detail-label{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--grey-400);font-weight:600;margin-bottom:6px;}
+.payment-detail-value{font-size:15px;font-weight:700;color:var(--black);word-break:break-word;}
+.payment-detail-value.mono{font-family:var(--font-mono);color:var(--orange-deep);font-size:17px;}
+.payment-note{margin-top:16px;font-size:13.5px;color:var(--grey-600);line-height:1.6;}
+@media(max-width:900px){.payment-details-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.payment-card{padding:24px 20px;}.payment-details-grid{grid-template-columns:1fr;}}
+
 /* --- Stats Row --- */
 .stats-row{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;padding:40px 0;}
 .stat-item{text-align:center;min-width:120px;}
